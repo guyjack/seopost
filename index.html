@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generatore Post WordPress AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    /* Basic body styling */
+    body {
+      font-family: 'Inter', sans-serif; /* A common Tailwind font stack */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-100">
+  <div id="root"></div>
+  <script>
+    // Polyfill for process.env.API_KEY for browser environment if not set by a build tool.
+    // In a real production environment, API keys should be handled securely, typically via a backend or build-time environment variables.
+    // For this exercise, we assume process.env.API_KEY might be available or needs a placeholder.
+    if (typeof process === 'undefined') {
+      window.process = { env: {} };
+    } else if (typeof process.env === 'undefined') {
+      process.env = {};
+    }
+    // To actually use the Gemini API, you would need to set this API_KEY.
+    // For example, in a script before your main bundle, or if your deployment environment injects it.
+    // process.env.API_KEY = "YOUR_GEMINI_API_KEY"; // << DO NOT COMMIT ACTUAL KEYS TO GIT
+                                                 // This line is a placeholder for how it might be set.
+                                                 // The app will check for its existence.
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

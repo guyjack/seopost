@@ -1,0 +1,5 @@
+{
+  "name": "Generatore Post WordPress AI",
+  "description": "Genera articoli per blog su argomenti selezionati usando l'AI e (simula) la pubblicazione su WordPress con ottimizzazione SEO.",
+  "requestFramePermissions": []
+}
